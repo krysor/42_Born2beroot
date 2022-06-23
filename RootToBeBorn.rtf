@@ -1,6 +1,6 @@
 {\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf600
 {\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Helvetica-Oblique;\f2\fswiss\fcharset0 Helvetica;
-\f3\fswiss\fcharset0 Helvetica-BoldOblique;}
+}
 {\colortbl;\red255\green255\blue255;}
 {\*\expandedcolortbl;;}
 {\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid1\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid2\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid3\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li2160\lin2160 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid4\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li2880\lin2880 }{\listname ;}\listid1}
@@ -37,12 +37,11 @@ Mandatory\
 \f0\i0\b \
 {\listtext	\uc0\u8259 	}
 \f1\i\b0 AppArmor running at startup
-\f2\i0  
-\f0\b think so but not sure\
+\f0\i0\b \
 {\listtext	\uc0\u8259 	}
 \f1\i\b0 create at least 2 encrypted partitions using LVM (look example
-\f2\i0 ) 
-\f0\b think so but not sure\
+\f2\i0 )
+\f0\b \
 \pard\tx940\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1440\fi-1440\pardirnatural\partightenfactor0
 \ls1\ilvl1
 \f1\i\b0 \cf0 {\listtext	\uc0\u8259 	}SSH service
@@ -68,40 +67,22 @@ Mandatory\
 \ls1\ilvl2\cf0 {\listtext	\uc0\u8259 	}login ending with 42
 \f0\i0\b \
 \pard\tx940\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1440\fi-1440\pardirnatural\partightenfactor0
-\ls1\ilvl1\cf0 {\listtext	\uc0\u8259 	}strong password policy\
+\ls1\ilvl1
+\f1\i\b0 \cf0 {\listtext	\uc0\u8259 	}strong password policy\
 \pard\tx1660\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li2160\fi-2160\pardirnatural\partightenfactor0
-\ls1\ilvl2
-\f2\b0 \cf0 \ul \ulc0 {\listtext	\ulnone \uc0\u8259 	}pw expires every 30 days
-\f0\b \
-\ls1\ilvl2
-\f2\b0 {\listtext	\uc0\u8259 	}
-\f1\i minimum days before pw modification: 2
-\f3\b !!!!!!!!! (Change back to what it should be)
-\f1\b0 \
-{\listtext	\uc0\u8259 	}warning 7 days before pw expires
-\f0\i0\b \
-\pard\tx1660\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li2160\fi-2160\pardirnatural\partightenfactor0
-\ls1\ilvl2
-\f1\i\b0 \cf0 {\listtext	\uc0\u8259 	}pw
-\f0\i0\b \
+\ls1\ilvl2\cf0 \ul \ulc0 {\listtext	\ulnone \uc0\u8259 	}pw expires every 30 days\
+{\listtext	\uc0\u8259 	}minimum days before pw modification: 2\
+{\listtext	\uc0\u8259 	}warning 7 days before pw expires\
+{\listtext	\uc0\u8259 	}pw\
 \pard\tx2380\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li2880\fi-2880\pardirnatural\partightenfactor0
-\ls1\ilvl3
-\f1\i\b0 \cf0 {\listtext	\uc0\u8259 	}at least 10 char long
-\f0\i0\b \
-\ls1\ilvl3
-\f1\i\b0 {\listtext	\uc0\u8259 	}must contain uppercase letter and a number
-\f0\i0\b \
-\ls1\ilvl3
-\f1\i\b0 {\listtext	\uc0\u8259 	}must NOT contain 3 consecutive identical characters
-\f0\i0\b \
-\ls1\ilvl3
-\f1\i\b0 {\listtext	\uc0\u8259 	}must NOT include the name of the user
-\f3\b Doesnt seem to work? (Both in pwquality and common-password)
-\f1\b0 \
+\ls1\ilvl3\cf0 {\listtext	\uc0\u8259 	}at least 10 char long\
+{\listtext	\uc0\u8259 	}must contain uppercase letter and a number\
+{\listtext	\uc0\u8259 	}must NOT contain 3 consecutive identical characters\
+{\listtext	\uc0\u8259 	}must NOT include the name of the user\
 \pard\tx1660\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li2160\fi-2160\pardirnatural\partightenfactor0
-\ls1\ilvl2\cf0 {\listtext	\uc0\u8259 	}(not for root pw): pw must have at least 7 chars different than former pw
+\ls1\ilvl2\cf0 {\listtext	\uc0\u8259 	}(not for root pw): pw must have at least 7 chars different than former pw\
+{\listtext	\uc0\u8259 	}root pw has to comply with everything as well
 \f0\i0\b \
-{\listtext	\uc0\u8259 	}root pw has to comply with everything as well\
 \pard\tx940\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1440\fi-1440\pardirnatural\partightenfactor0
 \ls1\ilvl1\cf0 {\listtext	\uc0\u8259 	}install and configure sudo using strict rules\
 \pard\tx1660\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li2160\fi-2160\pardirnatural\partightenfactor0
