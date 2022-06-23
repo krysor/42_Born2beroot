@@ -6,7 +6,7 @@
 {\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid1\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid2\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid3\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li2160\lin2160 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid4\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li2880\lin2880 }{\listname ;}\listid1}
 {\list\listtemplateid2\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid101\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid102\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listname ;}\listid2}}
 {\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}}
-\margl1440\margr1440\vieww15980\viewh14680\viewkind0
+\margl1440\margr1440\vieww13420\viewh14680\viewkind0
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 
 \f0\b\fs36 \cf0 Test commands:\
@@ -70,7 +70,7 @@ Mandatory\
 \ls1\ilvl1
 \f1\i\b0 \cf0 {\listtext	\uc0\u8259 	}strong password policy\
 \pard\tx1660\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li2160\fi-2160\pardirnatural\partightenfactor0
-\ls1\ilvl2\cf0 \ul \ulc0 {\listtext	\ulnone \uc0\u8259 	}pw expires every 30 days\
+\ls1\ilvl2\cf0 {\listtext	\uc0\u8259 	}pw expires every 30 days\
 {\listtext	\uc0\u8259 	}minimum days before pw modification: 2\
 {\listtext	\uc0\u8259 	}warning 7 days before pw expires\
 {\listtext	\uc0\u8259 	}pw\
@@ -82,9 +82,9 @@ Mandatory\
 \pard\tx1660\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li2160\fi-2160\pardirnatural\partightenfactor0
 \ls1\ilvl2\cf0 {\listtext	\uc0\u8259 	}(not for root pw): pw must have at least 7 chars different than former pw\
 {\listtext	\uc0\u8259 	}root pw has to comply with everything as well
-\f0\i0\b \
+\f0\i0\b \ul \
 \pard\tx940\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1440\fi-1440\pardirnatural\partightenfactor0
-\ls1\ilvl1\cf0 {\listtext	\uc0\u8259 	}install and configure sudo using strict rules\
+\ls1\ilvl1\cf0 {\listtext	\uc0\u8259 	}\ulnone install and configure sudo using strict rules\
 \pard\tx1660\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li2160\fi-2160\pardirnatural\partightenfactor0
 \ls1\ilvl2\cf0 {\listtext	\uc0\u8259 	}3 sudo attempts if pw incorrect\
 {\listtext	\uc0\u8259 	}custom message displayed if wrong pw when sudo\
@@ -97,6 +97,8 @@ Mandatory\
 \ls1\ilvl2\cf0 {\listtext	\uc0\u8259 	}paths for sudo must be restricted (look EXAMPLE)\
 \pard\tx940\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1440\fi-1440\pardirnatural\partightenfactor0
 \ls1\ilvl1\cf0 {\listtext	\uc0\u8259 	}this user has to belong user42 and sudo groups\
+\pard\tx940\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1440\fi-1440\pardirnatural\partightenfactor0
+\ls1\ilvl1\cf0 {\listtext	\uc0\u8259 	}apart from the root user a user with my login as username has to be present\
 {\listtext	\uc0\u8259 	}make script monitoring.sh (in bash)\
 \pard\tx1660\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li2160\fi-2160\pardirnatural\partightenfactor0
 \ls1\ilvl2\cf0 {\listtext	\uc0\u8259 	}at server startup display some info on all terminals every 10 minus\
