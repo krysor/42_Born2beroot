@@ -16,15 +16,20 @@
 
 \f0\i\fs36 \cf0 \ul \ulc0 Test commands:\ulnone \
 \pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
+\ls1\ilvl0\cf0 {\listtext	\uc0\u8226 	}head -n 2 /etc/os-release
+\f1\i0 \
 \ls1\ilvl0
-\f1\i0 \cf0 {\listtext	\uc0\u8226 	}head -n 2 /etc/os-release\
-{\listtext	\uc0\u8226 	}lsblk\
-{\listtext	\uc0\u8226 	}aa-status\
+\f0\i {\listtext	\uc0\u8226 	}lsblk
+\f1\i0 \
+\ls1\ilvl0
+\f0\i {\listtext	\uc0\u8226 	}aa-status
+\f1\i0 \
 {\listtext	\uc0\u8226 	}ss -tunlp
 \f2\b  HAVE SOME UDP SHIT RUNNING HERE
 \f1\b0 \
-{\listtext	\uc0\u8226 	}ufw status
-\f2\b \
+\ls1\ilvl0
+\f0\i {\listtext	\uc0\u8226 	}ufw status
+\f2\i0\b \
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 \cf0 \
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
@@ -234,24 +239,57 @@ AppArmor (and SMACK) is very straight forward. The profiles can be hand written 
 \ls2\ilvl1\cf0 {\listtext	\uc0\u8259 	}strong password policy\
 \pard\tx1660\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li2160\fi-2160\pardirnatural\partightenfactor0
 \ls2\ilvl2\cf0 {\listtext	\uc0\u8259 	}
-\f2\b https://www.server-world.info/en/note?os=Debian_10&p=password
-\f1\b0 \
-{\listtext	\uc0\u8259 	}pw expires every 30 days\
-{\listtext	\uc0\u8259 	}minimum days before pw modification: 2\
-{\listtext	\uc0\u8259 	}warning 7 days before pw expires\
-{\listtext	\uc0\u8259 	}pw\
+\f3\i\b https://www.server-world.info/en/note?os=Debian_10&p=password
+\f0\b0 \
+{\listtext	\uc0\u8259 	}
+\f3\b nano /etc/login.defs
+\f0\b0 \
 \pard\tx2380\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li2880\fi-2880\pardirnatural\partightenfactor0
-\ls2\ilvl3\cf0 {\listtext	\uc0\u8259 	}at least 10 char long\
-{\listtext	\uc0\u8259 	}must contain uppercase letter and a number\
-{\listtext	\uc0\u8259 	}must NOT contain 3 consecutive identical characters\
-{\listtext	\uc0\u8259 	}must NOT include the name of the user\
+\ls2\ilvl3\cf0 {\listtext	\uc0\u8259 	}pw expires every 30 days\
+{\listtext	\uc0\u8259 	}minimum days before pw modification: 2\
+{\listtext	\uc0\u8259 	}warning 7 days before pw expires
+\f1\i0 \
 \pard\tx1660\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li2160\fi-2160\pardirnatural\partightenfactor0
-\ls2\ilvl2\cf0 {\listtext	\uc0\u8259 	}(not for root pw): pw must have at least 7 chars different than former pw\
-{\listtext	\uc0\u8259 	}root pw has to comply with everything as well
-\f2\b \ul \
+\ls2\ilvl2
+\f0\i \cf0 {\listtext	\uc0\u8259 	}
+\f3\b nano /etc/pam.d/common-password
+\f2\i0 \
+\pard\tx1660\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li2160\fi-2160\pardirnatural\partightenfactor0
+\ls2\ilvl2
+\f0\i\b0 \cf0 {\listtext	\uc0\u8259 	}pw (
+\f3\b nano /etc/security/pwquality.conf
+\f0\b0 )
+\f1\i0 \
+\pard\tx2380\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li2880\fi-2880\pardirnatural\partightenfactor0
+\ls2\ilvl3
+\f0\i \cf0 {\listtext	\uc0\u8259 	}at least 10 char long
+\f1\i0 \
+\ls2\ilvl3
+\f0\i {\listtext	\uc0\u8259 	}must contain uppercase letter and a number
+\f1\i0 \
+\ls2\ilvl3
+\f0\i {\listtext	\uc0\u8259 	}must NOT contain 3 consecutive identical characters
+\f1\i0 \
+\ls2\ilvl3
+\f0\i {\listtext	\uc0\u8259 	}must NOT include the name of the user
+\f1\i0 \
+\pard\tx1660\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li2160\fi-2160\pardirnatural\partightenfactor0
+\ls2\ilvl2\cf0 {\listtext	\uc0\u8259 	}
+\f0\i (not for root pw): pw must have at least 7 chars different than former pw\
+\pard\tx2380\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li2880\fi-2880\pardirnatural\partightenfactor0
+\ls2\ilvl3\cf0 {\listtext	\uc0\u8259 	}
+\f2\i0\b\fs128 DOESNT SEEM TO WORK FOR NORMAL USER
+\f0\i\b0\fs36 \
+\pard\tx2380\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li2880\fi-2880\pardirnatural\partightenfactor0
+\ls2\ilvl3
+\f1\i0 \cf0 {\listtext	\uc0\u8259 	}not enforcing for root by default\
+\pard\tx3100\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li3600\fi-3600\pardirnatural\partightenfactor0
+\ls2\ilvl4\cf0 {\listtext	\uc0\u8259 	}(check if wanted!)\
+\pard\tx1660\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li2160\fi-2160\pardirnatural\partightenfactor0
+\ls2\ilvl2
+\f0\i \cf0 {\listtext	\uc0\u8259 	}root pw has to comply with everything as well\
 \pard\tx940\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1440\fi-1440\pardirnatural\partightenfactor0
-\ls2\ilvl1
-\f0\i\b0 \cf0 \ulnone {\listtext	\uc0\u8259 	}install and configure sudo using strict rules
+\ls2\ilvl1\cf0 {\listtext	\uc0\u8259 	}install and configure sudo using strict rules
 \f1\i0 \
 \pard\tx1660\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li2160\fi-2160\pardirnatural\partightenfactor0
 \ls2\ilvl2
@@ -296,14 +334,18 @@ AppArmor (and SMACK) is very straight forward. The profiles can be hand written 
 \f2\b \cf0 {\listtext	\uc0\u8259 	}FOTOS + CHECK EACH LINE AFTERWARDS\
 \pard\tx1660\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li2160\fi-2160\pardirnatural\partightenfactor0
 \ls2\ilvl2
-\f1\b0 \cf0 {\listtext	\uc0\u8259 	}check \'91wall\'92
-\f2\b \
+\f0\i\b0 \cf0 {\listtext	\uc0\u8259 	}check \'91wall\'92
+\f3\b \
 \ls2\ilvl2
-\f1\b0 {\listtext	\uc0\u8259 	}check \'91cron\'92\
-{\listtext	\uc0\u8259 	}at server startup display some info on all terminals every 10 minus
-\f2\b \
+\f0\b0 {\listtext	\uc0\u8259 	}check \'91cron\'92
+\f1\i0 \
+{\listtext	\uc0\u8259 	}at server startup display some info on all terminals every 10 minus\
+\pard\tx2380\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li2880\fi-2880\pardirnatural\partightenfactor0
+\ls2\ilvl3
+\f2\b \cf0 {\listtext	\uc0\u8259 	}check the crontab location and file\
+\pard\tx1660\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li2160\fi-2160\pardirnatural\partightenfactor0
 \ls2\ilvl2
-\f1\b0 {\listtext	\uc0\u8259 	}banner optional
+\f1\b0 \cf0 {\listtext	\uc0\u8259 	}banner optional
 \f2\b \
 \ls2\ilvl2
 \f1\b0 {\listtext	\uc0\u8259 	}no error visible
@@ -447,8 +489,13 @@ AppArmor (and SMACK) is very straight forward. The profiles can be hand written 
 {\listtext	\uc0\u8259 	}
 \f0\i\b0 create a new user and assign to a group
 \f2\i0\b \
-{\listtext	\uc0\u8259 	}change pw of all accounts + root\
-{\listtext	\uc0\u8259 	}working of script + how to interrupt without modifying\
+\ls2\ilvl1
+\f0\i\b0 {\listtext	\uc0\u8259 	}change pw of all accounts + root\
+\pard\tx1660\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li2160\fi-2160\pardirnatural\partightenfactor0
+\ls2\ilvl2\cf0 {\listtext	\uc0\u8259 	}passed <username>
+\f2\i0\b \
+\pard\tx940\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1440\fi-1440\pardirnatural\partightenfactor0
+\ls2\ilvl1\cf0 {\listtext	\uc0\u8259 	}working of script + how to interrupt without modifying\
 {\listtext	\uc0\u8259 	}justify choice service for bonus part\
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 \cf0 \
